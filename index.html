@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varun N Yaligar | AIML Engineer & Python Developer</title>
+  <meta name="description" content="Portfolio of Varun N Yaligar - AIML Engineer specializing in Python, FastAPI, OpenCV, YOLO, IoT, and Database Systems.">
+  <meta name="keywords" content="Varun N Yaligar, AIML Engineer, Python Developer, FastAPI, OpenCV, YOLO, IoT, Streamlit, AIET Moodbidri">
+  <meta name="author" content="Varun N Yaligar">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-code">&lt;VNY /&gt;</span>
+        <span>Varun Yaligar</span>
+      </a>
+      
+      <div class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Certifications</a>
+        <a href="#interests" class="nav-link">Passions</a>
+        <button class="nav-link modal-trigger" data-modal="modal-resume"><i class="fa-solid fa-file-pdf"></i> CV / Resume</button>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.45rem 1rem; font-size: 0.85rem;">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="icon-btn nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-status">
+          <span class="status-dot"></span> B.E. AIML Student @ AIET Moodbidri
+        </div>
+        <h1 class="hero-name">
+          Hi, I'm <span class="gradient-text">Varun Yaligar</span>
+        </h1>
+        <div class="hero-tagline">
+          AIML Engineer & Full-Stack Python Developer
+        </div>
+        <p class="hero-bio">
+          Undergraduate in Artificial Intelligence & Machine Learning. Passionate about building computer vision models with OpenCV & YOLO, developing scalable FastAPI microservices, and engineering relational database systems.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-diagram-project"></i> View Featured Projects
+          </a>
+          <button class="btn btn-secondary modal-trigger" data-modal="modal-resume">
+            <i class="fa-solid fa-file-pdf"></i> Read Full Resume
+          </button>
+        </div>
+
+        <div class="social-links">
+          <a href="mailto:varunyaligar1@gmail.com" class="social-link">
+            <i class="fa-solid fa-envelope"></i> varunyaligar1@gmail.com
+          </a>
+          <a href="tel:+918660070504" class="social-link">
+            <i class="fa-solid fa-phone"></i> +91 8660070504
+          </a>
+          <a href="https://linkedin.com/in/varun-yaligar" target="_blank" rel="noopener" class="social-link">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/varunyaligar1-max" target="_blank" rel="noopener" class="social-link">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="profile-card">
+          <div class="profile-frame">
+            <img src="varun-profile.jpg" alt="Varun N Yaligar" class="profile-photo" id="profile-img">
+            <label for="avatar-input" class="photo-upload-label" title="Change Photo">
+              <i class="fa-solid fa-camera"></i>
+              <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+            </label>
+          </div>
+          <div class="profile-meta">
+            <h3>Varun N Yaligar</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Moodbidri / Dharwad, Karnataka</p>
+          </div>
+          <div class="profile-stats">
+            <div class="stat-box">
+              <span class="stat-val">50+</span>
+              <span class="stat-lbl">LeetCode</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-val">7.3</span>
+              <span class="stat-lbl">CGPA</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-val">2+</span>
+              <span class="stat-lbl">Projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Background Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">BACKGROUND & EDUCATION</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="card bio-card">
+          <p>
+            I am a dedicated AIML undergraduate at <strong>Alva's Institute of Engineering & Technology</strong>. My primary technical interest lies in designing practical AI solutions — combining computer vision object detection algorithms with robust backend web APIs.
+          </p>
+          <p>
+            I take pride in writing clean Python code, building interactive prototypes with Streamlit & FastAPI, and working on IoT telemetry applications to solve real-world problems.
+          </p>
+          
+          <div class="bio-highlights">
+            <div class="bio-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><strong>Core Interests:</strong> Computer Vision (YOLO/OpenCV), Backend Microservices & Relational Databases</span>
+            </div>
+            <div class="bio-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><strong>Academic Project Work:</strong> Elephant Detection IoT Early-Warning System & Airline Management Portal</span>
+            </div>
+            <div class="bio-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span><strong>Foundation:</strong> Sports School Sportsmanship & Traditional Dollu Kunitha Cultural Arts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <!-- B.E. AIML -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-content">
+              <span class="timeline-date">2023 – Present</span>
+              <h4>B.E. in Artificial Intelligence & Machine Learning</h4>
+              <p class="timeline-inst">Alva’s Institute of Engineering & Technology, Moodbidri</p>
+              <span class="badge">CGPA: 7.3</span>
+            </div>
+          </div>
+
+          <!-- PU Science -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-content">
+              <span class="timeline-date">2021 – 2023</span>
+              <h4>PU (Science) — PCMB Stream</h4>
+              <p class="timeline-inst">ICS Mahesh PU College, Dharwad</p>
+              <span class="badge">Score: 75%</span>
+            </div>
+          </div>
+
+          <!-- SSLC -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-content">
+              <span class="timeline-date">2011 – 2021</span>
+              <h4>SSLC (Class 10)</h4>
+              <p class="timeline-inst">Sports School, Chandargi</p>
+              <span class="badge">Score: 90% (Distinction)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Stack Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">TECHNICAL TOOLKIT</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Stack</span></h2>
+      </div>
+
+      <div class="skills-categories">
+        <!-- Programming & DB -->
+        <div class="card skill-category">
+          <h3><i class="fa-solid fa-code"></i> Core Languages & Databases</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-brands fa-python"></i> Python 3.x</span>
+            <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL</span>
+            <span class="skill-pill"><i class="fa-solid fa-server"></i> MySQL</span>
+            <span class="skill-pill"><i class="fa-solid fa-hard-drive"></i> SQLite</span>
+            <span class="skill-pill"><i class="fa-solid fa-laptop-code"></i> C / C++</span>
+          </div>
+        </div>
+
+        <!-- AI & Computer Vision -->
+        <div class="card skill-category">
+          <h3><i class="fa-solid fa-brain"></i> AI & Computer Vision</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-solid fa-eye"></i> OpenCV</span>
+            <span class="skill-pill"><i class="fa-solid fa-bullseye"></i> YOLOv8</span>
+            <span class="skill-pill"><i class="fa-solid fa-microchip"></i> IoT Sensors</span>
+            <span class="skill-pill"><i class="fa-solid fa-calculator"></i> NumPy</span>
+          </div>
+        </div>
+
+        <!-- Web & Frameworks -->
+        <div class="card skill-category">
+          <h3><i class="fa-solid fa-layer-group"></i> Frameworks & Web</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-solid fa-bolt"></i> FastAPI</span>
+            <span class="skill-pill"><i class="fa-solid fa-sliders"></i> Streamlit</span>
+            <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span class="skill-pill"><i class="fa-brands fa-figma"></i> Figma</span>
+          </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="card skill-category">
+          <h3><i class="fa-solid fa-wrench"></i> Developer Tools</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span class="skill-pill"><i class="fa-brands fa-github"></i> GitHub</span>
+            <span class="skill-pill"><i class="fa-solid fa-terminal"></i> VS Code</span>
+            <span class="skill-pill"><i class="fa-solid fa-cubes"></i> LeetCode (50+)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">PRACTICAL WORK & MINI-PROJECTS</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Elephant Detection -->
+        <div class="card project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-tag-badge"><i class="fa-solid fa-shield-halved"></i> IoT & Computer Vision</span>
+            </div>
+            <h3>Elephant Detection System using IoT Sensors</h3>
+            <p>
+              An emergency wildlife detection system built to prevent human–elephant conflict around forest boundaries. Utilizes custom YOLOv8 model inference on OpenCV camera feeds to trigger automated siren signals and ranger alerts.
+            </p>
+            <div class="project-tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">YOLOv8</span>
+              <span class="tech-pill">OpenCV</span>
+              <span class="tech-pill">IoT Telemetry</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary modal-trigger" data-modal="modal-elephant">
+              <i class="fa-solid fa-code"></i> Read Architecture & Code
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2: Airline Management System -->
+        <div class="card project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-tag-badge"><i class="fa-solid fa-plane"></i> Web & Database</span>
+            </div>
+            <h3>Airline Management System</h3>
+            <p>
+              Full-stack 4th Semester mini-project engineered with Streamlit for a responsive user dashboard and SQLite for relational operations — supporting flight schedules, passenger bookings, and CRUD operations.
+            </p>
+            <div class="project-tech">
+              <span class="tech-pill">Streamlit</span>
+              <span class="tech-pill">SQLite</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">SQL Schema</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary modal-trigger" data-modal="modal-airline">
+              <i class="fa-solid fa-database"></i> Read DB Schema & Code
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3: FastAPI Microservices -->
+        <div class="card project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-tag-badge"><i class="fa-solid fa-bolt"></i> Backend Microservices</span>
+            </div>
+            <h3>FastAPI AI Ingestion Microservice</h3>
+            <p>
+              Asynchronous REST API pipeline built with FastAPI and Pydantic for high-throughput image payload ingestion, input validation, and model telemetry routing.
+            </p>
+            <div class="project-tech">
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">Pydantic</span>
+              <span class="tech-pill">AsyncIO</span>
+              <span class="tech-pill">OpenAPI</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary modal-trigger" data-modal="modal-fastapi">
+              <i class="fa-solid fa-server"></i> Read API Code
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Passions Section -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">ACHIEVEMENTS & INTERESTS</span>
+        <h2 class="section-title">Certifications & <span class="gradient-text">Passions</span></h2>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card cert-card">
+          <div class="cert-icon"><i class="fa-brands fa-google"></i></div>
+          <div class="cert-info">
+            <h4>Google Cloud Generative AI Leader Track</h4>
+            <p>Certified in fundamental GenAI concepts, LLM architectures, and cloud AI offerings.</p>
+          </div>
+        </div>
+
+        <div class="card cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <div class="cert-info">
+            <h4>NPTEL Internet of Things (IoT)</h4>
+            <p>Certification covering IoT sensor protocols, embedded hardware, and network telemetry.</p>
+          </div>
+        </div>
+
+        <div class="card cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="cert-info">
+            <h4>Competitive Coding & Problem Solving</h4>
+            <p>Solved 50+ problems on LeetCode across Data Structures, Algorithms, and SQL queries.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Passions -->
+      <div class="cards-grid" id="interests" style="margin-top: 2rem;">
+        <div class="card cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-volleyball"></i></div>
+          <div class="cert-info">
+            <h4>Sports School Athletics Alumnus</h4>
+            <p>10-year alumnus of Sports School, Chandargi (SSLC 90%). Developed teamwork, agility, and sportsmanship.</p>
+          </div>
+        </div>
+
+        <div class="card cert-card">
+          <div class="cert-icon"><i class="fa-solid fa-drum"></i></div>
+          <div class="cert-info">
+            <h4>Folk Dance: Dollu Kunitha</h4>
+            <p>Performer of Dollu Kunitha — Karnataka's high-energy traditional drum folk dance art form.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">GET IN TOUCH</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h3>Let's Connect</h3>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+            Open for AIML engineering internships, FastAPI backend opportunities, and tech collaborations.
+          </p>
+
+          <div class="contact-info-list">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-text">
+                <label>Email Address</label>
+                <a href="mailto:varunyaligar1@gmail.com">varunyaligar1@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-text">
+                <label>Phone / WhatsApp</label>
+                <a href="tel:+918660070504">+91 8660070504</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-text">
+                <label>Location</label>
+                <span>Moodbidri / Dharwad, Karnataka, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="card contact-form" id="contact-form">
+          <h3>Send a Message</h3>
+          
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required placeholder="e.g. Rahul Sharma">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required placeholder="e.g. rahul@company.com">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" required placeholder="Hi Varun, I saw your portfolio and would like to connect..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 <strong>Varun N Yaligar</strong>. Built with HTML, CSS & JavaScript.</p>
+      <a href="#hero" class="social-link" style="padding: 0.3rem 0.6rem;"><i class="fa-solid fa-arrow-up"></i> Top</a>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- Modal 1: Elephant Detection Code -->
+  <div class="modal" id="modal-elephant">
+    <div class="modal-dialog">
+      <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <h3>Elephant Detection System - Technical Details</h3>
+      <p style="color: var(--text-muted); margin-top: 0.5rem;">
+        Designed to minimize human–wildlife conflict in rural/border zones by analyzing video streams using custom YOLOv8 model and broadcasting alerts.
+      </p>
+      <pre class="code-block"><code>import cv2
+from ultralytics import YOLO
+import requests
+
+# Load custom YOLOv8 model for elephant detection
+model = YOLO('models/elephant_yolov8.pt')
+cap = cv2.VideoCapture(0)  # Camera feed stream
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret: break
+
+    results = model(frame, conf=0.75)
+    for r in results:
+        for box in r.boxes:
+            if int(box.cls) == 20:  # Elephant Class ID
+                x1, y1, x2, y2 = map(int, box.xyxy[0])
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                
+                # Dispatch alert to IoT siren gateway
+                requests.post("http://iot-gateway.local/alert", json={"zone": "Forest_B4", "alert": "ELEPHANT"})
+
+    cv2.imshow("Detection Feed", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'): break</code></pre>
+    </div>
+  </div>
+
+  <!-- Modal 2: Airline Management Code -->
+  <div class="modal" id="modal-airline">
+    <div class="modal-dialog">
+      <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <h3>Airline Management System - Code & DB Architecture</h3>
+      <p style="color: var(--text-muted); margin-top: 0.5rem;">
+        4th Semester mini-project utilizing Streamlit for the user dashboard and SQLite3 for database operations.
+      </p>
+      <pre class="code-block"><code>import streamlit as st
+import sqlite3
+
+def init_db():
+    conn = sqlite3.connect('airline.db')
+    c = conn.cursor()
+    c.execute('''CREATE TABLE IF NOT EXISTS flights 
+                 (flight_id TEXT PRIMARY KEY, airline TEXT, origin TEXT, destination TEXT, seats INTEGER)''')
+    conn.commit()
+    conn.close()
+
+st.title("🛫 Airline Operations Dashboard")
+option = st.sidebar.selectbox("Navigation", ["View Flights", "Book Flight", "Admin Panel"])
+
+if option == "View Flights":
+    conn = sqlite3.connect('airline.db')
+    flights = conn.execute("SELECT * FROM flights").fetchall()
+    st.table(flights)</code></pre>
+    </div>
+  </div>
+
+  <!-- Modal 3: FastAPI Code -->
+  <div class="modal" id="modal-fastapi">
+    <div class="modal-dialog">
+      <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <h3>FastAPI Microservice Code</h3>
+      <p style="color: var(--text-muted); margin-top: 0.5rem;">
+        Asynchronous FastAPI endpoint handling computer vision inference calls and JSON response schemas.
+      </p>
+      <pre class="code-block"><code>from fastapi import FastAPI
+from pydantic import BaseModel, Field
+
+app = FastAPI(title="AIML Inference Service")
+
+class DetectionPayload(BaseModel):
+    camera_id: str = Field(..., example="CAM-04")
+    zone: str = Field(..., example="Forest_B4")
+    confidence_threshold: float = 0.75
+
+@app.post("/api/v1/predict/elephant")
+async def predict(payload: DetectionPayload):
+    return {
+        "status": "success",
+        "detected": True,
+        "confidence": 0.984,
+        "bounding_box": [120, 85, 340, 290]
+    }</code></pre>
+    </div>
+  </div>
+
+  <!-- Modal 4: Full Printable Resume View -->
+  <div class="modal" id="modal-resume">
+    <div class="modal-dialog">
+      <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <h3 style="margin-bottom: 1rem;">Varun N Yaligar — Curriculum Vitae</h3>
+      
+      <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: 10px; font-size: 0.9rem; line-height: 1.6;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.2rem;">Varun N Yaligar</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1rem;">Email: varunyaligar1@gmail.com | Phone: +91 8660070504 | Location: Moodbidri / Dharwad</p>
+        
+        <h4 style="color: var(--accent-cyan); margin: 1rem 0 0.4rem;">Objective</h4>
+        <p>AIML undergraduate seeking AI and software development roles. Proficient in Python, SQL, FastAPI, OpenCV, YOLO, and Streamlit.</p>
+        
+        <h4 style="color: var(--accent-cyan); margin: 1rem 0 0.4rem;">Education</h4>
+        <p><strong>B.E. AIML</strong> — Alva’s Institute of Engineering & Tech (2023–Present, CGPA: 7.3)</p>
+        <p><strong>PU (Science)</strong> — ICS Mahesh PU College, Dharwad (2021–2023, 75%)</p>
+        <p><strong>SSLC (Class 10)</strong> — Sports School, Chandargi (2011–2021, 90%)</p>
+        
+        <h4 style="color: var(--accent-cyan); margin: 1rem 0 0.4rem;">Projects</h4>
+        <p><strong>Elephant Detection System:</strong> Python, OpenCV, YOLOv8 object detection, IoT Siren alerts.</p>
+        <p><strong>Airline Management System:</strong> Streamlit frontend, SQLite backend operations.</p>
+        
+        <h4 style="color: var(--accent-cyan); margin: 1rem 0 0.4rem;">Certifications</h4>
+        <p>- Google Cloud Generative AI Leader Track Certified</p>
+        <p>- NPTEL Internet of Things (IoT) Certified</p>
+      </div>
+
+      <div style="margin-top: 1.25rem; display: flex; justify-content: flex-end;">
+        <button class="btn btn-primary" onclick="window.print()"><i class="fa-solid fa-print"></i> Print / Save as PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Element -->
+  <div class="toast" id="toast"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

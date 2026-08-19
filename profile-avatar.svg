@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 375" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#070a14"/>
+      <stop offset="100%" stop-color="#1e1035"/>
+    </linearGradient>
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#9d4edd"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d0a9"/>
+      <stop offset="100%" stop-color="#e0a96d"/>
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Passport Background Rect -->
+  <rect x="0" y="0" width="300" height="375" fill="url(#bgGlow)"/>
+  
+  <!-- Subtle Passport Studio Background Light -->
+  <circle cx="150" cy="150" r="140" fill="url(#cyanPurple)" opacity="0.15"/>
+  <rect x="10" y="10" width="280" height="355" fill="none" stroke="url(#cyanPurple)" stroke-width="2" stroke-dasharray="8 6" opacity="0.4"/>
+
+  <!-- Male Passport Headshot Portrait -->
+  <g id="passport-portrait">
+    <!-- Formal Suit / Blazer (Passport Style) -->
+    <path d="M 30,375 Q 40,285 105,260 Q 150,275 195,260 Q 260,285 270,375 Z" fill="url(#suitGrad)" stroke="url(#cyanPurple)" stroke-width="2"/>
+    <!-- Formal White Shirt V-Neck & Tie Accent -->
+    <path d="M 125,265 L 150,335 L 175,265 Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M 144,275 L 156,275 L 153,340 L 147,340 Z" fill="#00f2fe"/>
+
+    <!-- Neck -->
+    <path d="M 125,210 L 175,210 L 175,265 L 125,265 Z" fill="url(#skinGrad)"/>
+    <path d="M 125,245 L 175,245 L 150,265 Z" fill="rgba(0,0,0,0.12)"/>
+
+    <!-- Head & Face -->
+    <ellipse cx="150" cy="170" rx="52" ry="64" fill="url(#skinGrad)"/>
+
+    <!-- Hair (Neat Passport Style) -->
+    <path d="M 94,160 Q 94,102 150,98 Q 206,102 206,160 Q 192,112 150,110 Q 108,112 94,160 Z" fill="#181124"/>
+    <path d="M 98,140 Q 108,106 150,102 Q 192,106 202,140 Q 180,116 150,116 Q 120,116 98,140 Z" fill="url(#cyanPurple)" opacity="0.5"/>
+
+    <!-- Eyeglasses (Professional Tech Frame) -->
+    <rect x="108" y="152" width="35" height="24" rx="5" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="2.5"/>
+    <rect x="157" y="152" width="35" height="24" rx="5" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="2.5"/>
+    <line x1="143" y1="164" x2="157" y2="164" stroke="#00f2fe" stroke-width="2.5"/>
+    <line x1="95" y1="161" x2="108" y2="161" stroke="#00f2fe" stroke-width="2"/>
+    <line x1="192" y1="161" x2="205" y2="161" stroke="#00f2fe" stroke-width="2"/>
+
+    <!-- Eyes -->
+    <circle cx="125" cy="164" r="4.5" fill="#181124"/>
+    <circle cx="175" cy="164" r="4.5" fill="#181124"/>
+    <circle cx="127" cy="162" r="1.8" fill="#ffffff"/>
+    <circle cx="177" cy="162" r="1.8" fill="#ffffff"/>
+
+    <!-- Eyebrows -->
+    <path d="M 105,142 Q 125,138 140,144" fill="none" stroke="#181124" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 160,144 Q 175,138 195,142" fill="none" stroke="#181124" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <path d="M 150,166 L 146,188 L 154,188" fill="none" stroke="#cf9463" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Smile -->
+    <path d="M 132,202 Q 150,213 168,202" fill="none" stroke="#b0623d" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Official ID / Passport Header Tag -->
+  <rect x="0" y="340" width="300" height="35" fill="rgba(15, 23, 42, 0.95)"/>
+  <text x="150" y="362" font-family="sans-serif" font-size="12" font-weight="bold" fill="#00f2fe" text-anchor="middle" letter-spacing="2">PASSPORT PHOTO ID</text>
+</svg>
