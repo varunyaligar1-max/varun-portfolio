@@ -436,6 +436,12 @@
               </div>
             </div>
           </div>
+
+          <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
+            <button class="btn btn-outline modal-trigger" data-modal="modal-inbox" style="width: 100%; justify-content: center; font-size: 0.85rem;">
+              <i class="fa-solid fa-inbox"></i> View Received Inbox Messages (<span id="inbox-count">0</span>)
+            </button>
+          </div>
         </div>
 
         <form class="card contact-form" id="contact-form">
@@ -456,7 +462,7 @@
             <textarea id="message" rows="4" required placeholder="Hi Varun, I saw your portfolio and would like to connect..."></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+          <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width: 100%; justify-content: center;">
             <i class="fa-solid fa-paper-plane"></i> Send Message
           </button>
         </form>
@@ -468,7 +474,10 @@
   <footer class="footer">
     <div class="container footer-content">
       <p>&copy; 2026 <strong>Varun N Yaligar</strong>. Built with HTML, CSS & JavaScript.</p>
-      <a href="#hero" class="social-link" style="padding: 0.3rem 0.6rem;"><i class="fa-solid fa-arrow-up"></i> Top</a>
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <button class="social-link modal-trigger" data-modal="modal-inbox" style="padding: 0.3rem 0.6rem; cursor: pointer;"><i class="fa-solid fa-inbox"></i> Local Inbox</button>
+        <a href="#hero" class="social-link" style="padding: 0.3rem 0.6rem;"><i class="fa-solid fa-arrow-up"></i> Top</a>
+      </div>
     </div>
   </footer>
 
@@ -600,8 +609,77 @@ async def predict(payload: DetectionPayload):
     </div>
   </div>
 
+  <!-- Modal 5: Received Messages Inbox -->
+  <div class="modal" id="modal-inbox">
+    <div class="modal-dialog" style="max-width: 680px;">
+      <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3><i class="fa-solid fa-inbox" style="color: var(--accent-cyan);"></i> Saved Messages Inbox</h3>
+        <button class="btn btn-outline" id="clear-inbox-btn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+          <i class="fa-solid fa-trash-can"></i> Clear All
+        </button>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.25rem;">
+        Messages submitted through the portfolio contact form are dispatched to <strong>varunyaligar1@gmail.com</strong> and saved here for local access.
+      </p>
+
+      <div id="inbox-messages-list" style="display: flex; flex-direction: column; gap: 1rem; max-height: 380px; overflow-y: auto; padding-right: 0.4rem;">
+        <!-- Messages rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Element -->
   <div class="toast" id="toast"></div>
+
+  <!-- ==================== AI PORTFOLIO ASSISTANT WIDGET ==================== -->
+  <div class="ai-widget-container" id="ai-widget-container">
+    <!-- AI Assistant Window -->
+    <div class="ai-chat-window" id="ai-chat-window">
+      <div class="ai-chat-header">
+        <div class="ai-chat-title">
+          <div class="ai-avatar">
+            <i class="fa-solid fa-robot"></i>
+            <span class="ai-status-pulse"></span>
+          </div>
+          <div>
+            <h4>Varun's AI Assistant</h4>
+            <span class="ai-subtext">Portfolio Intelligence & Answers</span>
+          </div>
+        </div>
+        <div class="ai-chat-actions">
+          <button class="ai-action-btn" id="ai-clear-btn" title="Clear Chat"><i class="fa-solid fa-rotate-right"></i></button>
+          <button class="ai-action-btn" id="ai-close-btn" title="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <div class="ai-suggestions" id="ai-suggestions">
+        <span class="ai-suggestion-chip" data-query="What are Varun's top technical skills?">💡 Top Skills</span>
+        <span class="ai-suggestion-chip" data-query="Tell me about his Elephant Detection project">🐘 Elephant Project</span>
+        <span class="ai-suggestion-chip" data-query="What is Varun's educational background & CGPA?">🎓 Education & CGPA</span>
+        <span class="ai-suggestion-chip" data-query="How can I contact Varun or hire him?">📬 Contact Info</span>
+        <span class="ai-suggestion-chip" data-query="What certifications does Varun have?">🏆 Certifications</span>
+        <span class="ai-suggestion-chip" data-query="Tell me about his folk dance Dollu Kunitha">🥁 Passions & Dance</span>
+      </div>
+
+      <div class="ai-chat-body" id="ai-chat-body">
+        <!-- Chat bubbles rendered dynamically -->
+      </div>
+
+      <form class="ai-chat-input-form" id="ai-chat-form">
+        <input type="text" id="ai-chat-input" placeholder="Ask Varun's AI Assistant..." autocomplete="off" required>
+        <button type="submit" class="ai-send-btn" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+    <!-- Floating Trigger Button -->
+    <button class="ai-widget-trigger" id="ai-widget-trigger" aria-label="Open AI Portfolio Assistant" title="Ask Varun's AI Assistant">
+      <span class="ai-trigger-badge">AI</span>
+      <i class="fa-solid fa-wand-magic-sparkles ai-trigger-icon"></i>
+      <i class="fa-solid fa-xmark ai-trigger-close-icon" style="display: none;"></i>
+      <span class="ai-pulse-ring"></span>
+    </button>
+  </div>
 
   <!-- JavaScript -->
   <script src="script.js"></script>
