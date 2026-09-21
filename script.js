@@ -487,7 +487,7 @@ function initAIAssistant() {
             <li><strong>Languages & DBs:</strong> Python 3.x, SQL (MySQL, SQLite), C, C++</li>
             <li><strong>AI & Computer Vision:</strong> OpenCV, YOLOv8, NumPy, IoT Sensors</li>
             <li><strong>Web & Backend:</strong> FastAPI, Streamlit, HTML5, CSS3, Figma</li>
-            <li><strong>Developer Tools:</strong> Git, GitHub, VS Code, LeetCode (50+ problems solved)</li>
+            <li><strong>Developer Tools:</strong> Git, GitHub, VS Code</li>
           </ul>
         `,
         actions: [
@@ -558,7 +558,7 @@ function initAIAssistant() {
         html: `
           <p>🎓 <strong>Varun's Educational Background:</strong></p>
           <ul>
-            <li><strong>B.E. in AIML:</strong> Alva’s Institute of Engineering & Technology, Moodbidri (2023–Present, <strong>CGPA: 7.3</strong>)</li>
+            <li><strong>B.E. in AIML:</strong> Alva’s Institute of Engineering & Technology, Moodbidri (2023–Present, <strong>CGPA: 7.7</strong>)</li>
             <li><strong>PU (Science - PCMB):</strong> ICS Mahesh PU College, Dharwad (2021–2023, <strong>75%</strong>)</li>
             <li><strong>SSLC (Class 10):</strong> Sports School, Chandargi (2011–2021, <strong>90% Distinction</strong>)</li>
           </ul>
@@ -598,7 +598,6 @@ function initAIAssistant() {
           <ul>
             <li><strong>Google Cloud Generative AI Leader Track:</strong> GenAI models, LLM architectures & Cloud AI</li>
             <li><strong>NPTEL Internet of Things (IoT):</strong> Hardware telemetry & sensor protocols</li>
-            <li><strong>LeetCode Problem Solving:</strong> 50+ problems solved across Data Structures & Algorithms</li>
           </ul>
         `,
         actions: [
