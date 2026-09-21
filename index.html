@@ -115,7 +115,7 @@
               <span class="stat-lbl">CGPA</span>
             </div>
             <div class="stat-box">
-              <span class="stat-val">3+</span>
+              <span class="stat-val">4+</span>
               <span class="stat-lbl">Projects</span>
             </div>
             <div class="stat-box">
@@ -333,6 +333,31 @@
           <div class="project-actions">
             <button class="btn btn-primary modal-trigger" data-modal="modal-fastapi">
               <i class="fa-solid fa-server"></i> Read API Code
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4: Notes-to-Story AI Video Generator -->
+        <div class="card project-card">
+          <div>
+            <div class="project-header">
+              <span class="project-tag-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Pipeline & Video Synthesis</span>
+            </div>
+            <h3>Notes-to-Story: Educational AI Video Generator</h3>
+            <p>
+              An automated end-to-end AI pipeline converting raw document notes (DOCX/PDF) into animated educational videos, character narrations, and automated quiz questions using custom scene rendering and async job state tracking.
+            </p>
+            <div class="project-tech">
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">MoviePy / OpenCV</span>
+              <span class="tech-pill">TTS Synthesis</span>
+              <span class="tech-pill">SQLite State</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <button class="btn btn-primary modal-trigger" data-modal="modal-notes-to-story">
+              <i class="fa-solid fa-clapperboard"></i> Read Pipeline & Code
             </button>
           </div>
         </div>
@@ -566,6 +591,45 @@ async def predict(payload: DetectionPayload):
     </div>
   </div>
 
+  <!-- Modal 4: Notes-to-Story AI Video Generator Code -->
+  <div class="modal" id="modal-notes-to-story">
+    <div class="modal-dialog">
+      <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <h3>Notes-to-Story: AI Video Generation Pipeline</h3>
+      <p style="color: var(--text-muted); margin-top: 0.5rem;">
+        An asynchronous AI engine converting raw document notes into animated educational videos with character narrations, script generation, and SQLite job state tracking.
+      </p>
+      <pre class="code-block"><code>import asyncio
+import json
+import sqlite3
+from app.services.video_renderer import generate_scene_video
+from app.services.script_generator import generate_heuristic_script
+
+async def render_notes_to_story(job_id: str):
+    """Async pipeline for rendering Notes-to-Story AI video scenes."""
+    conn = sqlite3.connect("backend/notes_to_story.db")
+    c = conn.cursor()
+    c.execute("SELECT summary_json FROM job_states WHERE id = ?", (job_id,))
+    row = c.fetchone()
+    
+    summary_data = json.loads(row[0]) if row else {}
+    # Generate NLP script with character actions & scene beats
+    script_data = generate_heuristic_script(summary_data)
+    
+    # Render scene video with audio TTS & animated frames
+    video_url = await generate_scene_video(script_data, job_id)
+    
+    c.execute("""
+        UPDATE job_states
+        SET script_json = ?, video_url = ?, status = 'completed', progress_percentage = 100.0
+        WHERE id = ?
+    """, (json.dumps(script_data), video_url, job_id))
+    conn.commit()
+    conn.close()
+    return video_url</code></pre>
+    </div>
+  </div>
+
   <!-- Modal 4: Full Printable Resume View -->
   <div class="modal" id="modal-resume">
     <div class="modal-dialog">
@@ -585,6 +649,7 @@ async def predict(payload: DetectionPayload):
         <p><strong>SSLC (Class 10)</strong> — Sports School, Chandargi (2011–2021, 90%)</p>
         
         <h4 style="color: var(--accent-cyan); margin: 1rem 0 0.4rem;">Projects</h4>
+        <p><strong>Notes-to-Story AI Video Generator:</strong> Document processing pipeline, character animation, MoviePy/OpenCV rendering, SQLite state machine.</p>
         <p><strong>Elephant Detection System:</strong> Python, OpenCV, YOLOv8 object detection, IoT Siren alerts.</p>
         <p><strong>Airline Management System:</strong> Streamlit frontend, SQLite backend operations.</p>
         

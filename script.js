@@ -497,7 +497,26 @@ function initAIAssistant() {
       };
     }
 
-    // 2. Elephant Detection Project
+    // 2. Notes-to-Story AI Video Generator
+    if (q.includes('notes') || q.includes('story') || q.includes('video') || q.includes('animation') || q.includes('tts') || q.includes('converter')) {
+      return {
+        html: `
+          <p>🎬 <strong>Notes-to-Story: Educational AI Video Generator</strong></p>
+          <p>An end-to-end AI pipeline converting text & document notes into animated educational videos with character narrations and automated quizzes.</p>
+          <ul>
+            <li><strong>Document Processing:</strong> Ingests DOCX/PDF notes and parses structured story scripts</li>
+            <li><strong>Video & Audio Pipeline:</strong> Async video scene composition using MoviePy, OpenCV & TTS voice synthesis</li>
+            <li><strong>State Machine:</strong> Asynchronous job tracking with SQLite state database</li>
+          </ul>
+        `,
+        actions: [
+          { label: '💻 Read Pipeline Code', type: 'modal', target: 'modal-notes-to-story' },
+          { label: '🚀 View Projects Grid', type: 'scroll', target: '#projects' }
+        ]
+      };
+    }
+
+    // 3. Elephant Detection Project
     if (q.includes('elephant') || q.includes('wildlife') || q.includes('siren') || q.includes('detector') || q.includes('warning')) {
       return {
         html: `
@@ -516,7 +535,7 @@ function initAIAssistant() {
       };
     }
 
-    // 3. Airline Management System
+    // 4. Airline Management System
     if (q.includes('airline') || q.includes('flight') || q.includes('booking') || q.includes('sqlite') || q.includes('streamlit')) {
       return {
         html: `
@@ -533,12 +552,13 @@ function initAIAssistant() {
       };
     }
 
-    // 4. Projects General
+    // 5. Projects General
     if (q.includes('project') || q.includes('work') || q.includes('built') || q.includes('app') || q.includes('portfolio')) {
       return {
         html: `
           <p><strong>Varun's Featured Projects:</strong></p>
           <ol>
+            <li><strong>Notes-to-Story AI Video Generator:</strong> Docx/PDF to Animated Educational Video Pipeline</li>
             <li><strong>Elephant Detection System:</strong> Custom YOLOv8 + OpenCV + IoT Siren Telemetry</li>
             <li><strong>Airline Management System:</strong> Streamlit + SQLite3 relational database</li>
             <li><strong>FastAPI AI Microservice:</strong> Async REST API for image inference payloads</li>
@@ -546,6 +566,7 @@ function initAIAssistant() {
         `,
         actions: [
           { label: '🚀 Scroll to Projects', type: 'scroll', target: '#projects' },
+          { label: '🎬 Notes-to-Story Code', type: 'modal', target: 'modal-notes-to-story' },
           { label: '🐘 Elephant Code', type: 'modal', target: 'modal-elephant' },
           { label: '⚡ FastAPI Code', type: 'modal', target: 'modal-fastapi' }
         ]
